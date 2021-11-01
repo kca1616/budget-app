@@ -22,7 +22,7 @@ A web platform where users can make wishlists for records that they want.
 
 ## Additional Technologies
 
-If you plan on using technologies outside of the scope of the course's content, please add them here. If you have developed any prototypes to test the technology, you can link them here as well if you'd like feedback.
+https://www.discogs.com/developers
 
 ## MVP/PostMVP
 
