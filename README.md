@@ -29,14 +29,12 @@ If you plan on using technologies outside of the scope of the course's content, 
 The functionality will then be divided into two separate lists: MVP and PostMVP.  Carefully decide what is placed into your MVP, as the client will expect this functionality to be implemented upon project completion.  
 
 #### MVP 
-*These are examples only. Replace with your own MVP features.*
 
 - Find and use external api for records
 - Render data on page 
 - Have user create wishlist with CRUD capabilities
 
 #### PostMVP  
-*These are examples only. Replace with your own Post-MVP features.*
 
 - Add "marketplace" where users can offer up records for sale
 - Add ability with marketplace to send counter offers. 
@@ -56,7 +54,7 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Working with Record API | H | 3hrs| 2.5hrs | 2.5hrs |
 | Edit wishlist | H | 3hrs| 2.5hrs | 2.5hrs |
 | Delete wishlist | H | 3hrs| 2.5hrs | 2.5hrs |
-| Render wihslist| H | 2hrs| 2.5hrs | 2.5hrs |
+| Render wishlist| H | 2hrs| 2.5hrs | 2.5hrs |
 | User login/auth | H | 3hrs| 2.5hrs | 2.5hrs |
 | Adding marketplace | H | 3hrs| 2.5hrs | 2.5hrs |
 | Adding messaging | H | 3hrs| 2.5hrs | 2.5hrs |
