@@ -7,14 +7,15 @@ Record App
 ## Project Description
 
 A web platform where users can make wishlists for records that they want.
+
 ## Wireframes
 
-![Screen Shot 2021-11-01 at 4 05 44 PM](https://user-images.githubusercontent.com/89033220/139754571-949fdfcb-fc8e-46ad-ae6c-b965fb1f01b7.png)
-![Screen Shot 2021-11-01 at 4 36 27 PM](https://user-images.githubusercontent.com/89033220/139755964-9a87a149-4655-48cd-91a6-9522b96aa441.png)
-
+![Screen Shot 2021-11-01 at 4 54 38 PM](https://user-images.githubusercontent.com/89033220/139757395-225d3518-2ec5-4e2a-8c1c-e34347303686.png)
+![Screen Shot 2021-11-01 at 4 54 44 PM](https://user-images.githubusercontent.com/89033220/139757401-42f878a7-6c59-4e71-b95e-7920ffb4425e.png)
 
 ## Component Hierarchy
-![Screen Shot 2021-11-01 at 3 45 19 PM](https://user-images.githubusercontent.com/89033220/139754524-0c765204-a552-4f89-810c-2149678ce3e5.png)
+
+![Screen Shot 2021-11-01 at 4 41 58 PM](https://user-images.githubusercontent.com/89033220/139756456-f170945b-3714-4360-92b3-d89889dc48d5.png)
 
 
 ## ERD (Entity Relationship Diagram)
