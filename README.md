@@ -6,16 +6,19 @@ Record App
 
 ## Project Description
 
-A web plagtform where users can make wishlists for records that they want.
+A web platform where users can make wishlists for records that they want.
 ## Wireframes
 
-Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
+![Screen Shot 2021-11-01 at 4 05 44 PM](https://user-images.githubusercontent.com/89033220/139754571-949fdfcb-fc8e-46ad-ae6c-b965fb1f01b7.png)
+
 
 ## Component Hierarchy
+![Screen Shot 2021-11-01 at 3 45 19 PM](https://user-images.githubusercontent.com/89033220/139754524-0c765204-a552-4f89-810c-2149678ce3e5.png)
+
 
 ## ERD (Entity Relationship Diagram)
+![Screen Shot 2021-11-01 at 4 18 15 PM](https://user-images.githubusercontent.com/89033220/139754539-82e9ad90-1f05-40d6-b5c4-e790f2cd3f18.png)
 
-Show us the relations between your tables (there must be three minimum), as well as their fields! Use [this](https://git.generalassemb.ly/sei-den-osos/data-modeling-intro-lesson#entity-relationship-diagrams-erds) as an example! In addition, please indicate which table will be used for full CRUD.
 
 ## Additional Technologies
 
@@ -49,9 +52,16 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Adding Wishlist Form | H | 3hrs| 3.5hrs | 3.5hrs |
+| Working with Record API | H | 3hrs| 2.5hrs | 2.5hrs |
+| Edit wishlist | H | 3hrs| 2.5hrs | 2.5hrs |
+| Delete wishlist | H | 3hrs| 2.5hrs | 2.5hrs |
+| Render wihslist| H | 2hrs| 2.5hrs | 2.5hrs |
+| User login/auth | H | 3hrs| 2.5hrs | 2.5hrs |
+| Adding marketplace | H | 3hrs| 2.5hrs | 2.5hrs |
+| Adding messaging | H | 3hrs| 2.5hrs | 2.5hrs |
+| Adding marketplace suggestions | H | 3hrs| 2.5hrs | 2.5hrs |
+| Total | H | 26hrs| 5hrs | 5hrs |
 
 ## SWOT Analysis
 
