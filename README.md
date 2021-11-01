@@ -61,7 +61,11 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Adding marketplace | H | 3hrs| 2.5hrs | 2.5hrs |
 | Adding messaging | H | 3hrs| 2.5hrs | 2.5hrs |
 | Adding marketplace suggestions | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 26hrs| 5hrs | 5hrs |
+| Set up a DB connection | H | 3hrs| 2.5hrs | 2.5hrs |
+| Deployment | E | 1hr| 2.5hrs | 2.5hrs |
+| Login/registration form | M | 3hrs| 2.5hrs | 2.5hrs |
+| Set up psql database | H | 3hrs | 2.5 hrs | 2.5 hrs |
+| Total | H | 36hrs| 5hrs | 5hrs |
 
 ## SWOT Analysis
 
