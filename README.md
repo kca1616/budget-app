@@ -10,8 +10,9 @@ A web platform where users can make wishlists for records that they want.
 
 ## Wireframes
 
-![Screen Shot 2021-11-01 at 4 54 38 PM](https://user-images.githubusercontent.com/89033220/139757395-225d3518-2ec5-4e2a-8c1c-e34347303686.png)
-![Screen Shot 2021-11-01 at 4 54 44 PM](https://user-images.githubusercontent.com/89033220/139757401-42f878a7-6c59-4e71-b95e-7920ffb4425e.png)
+![Screen Shot 2021-11-01 at 5 00 03 PM](https://user-images.githubusercontent.com/89033220/139757820-9ef50e0b-4520-4cd7-8148-165934a3e1c8.png)
+![Screen Shot 2021-11-01 at 4 59 34 PM](https://user-images.githubusercontent.com/89033220/139757839-27c66358-c74d-431b-a6b4-01b34c3c7591.png)
+![Screen Shot 2021-11-01 at 4 59 41 PM](https://user-images.githubusercontent.com/89033220/139757849-724c82bf-1043-470c-a833-d1c16a7dc1d5.png)
 
 ## Component Hierarchy
 
