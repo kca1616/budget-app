@@ -16,7 +16,8 @@ A web platform where users can make wishlists for records that they want.
 
 ## Component Hierarchy
 
-![Screen Shot 2021-11-01 at 4 41 58 PM](https://user-images.githubusercontent.com/89033220/139756456-f170945b-3714-4360-92b3-d89889dc48d5.png)
+
+![Screen Shot 2021-11-01 at 5 03 08 PM](https://user-images.githubusercontent.com/89033220/139758150-d5e3d27b-6a37-40cf-b08f-2051323fbec0.png)
 
 
 ## ERD (Entity Relationship Diagram)
