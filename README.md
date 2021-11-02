@@ -10,19 +10,18 @@ A web platform where users can make wishlists for records that they want.
 
 ## Wireframes
 
-![Screen Shot 2021-11-01 at 5 00 03 PM](https://user-images.githubusercontent.com/89033220/139757820-9ef50e0b-4520-4cd7-8148-165934a3e1c8.png)
-![Screen Shot 2021-11-01 at 4 59 34 PM](https://user-images.githubusercontent.com/89033220/139757839-27c66358-c74d-431b-a6b4-01b34c3c7591.png)
-![Screen Shot 2021-11-01 at 4 59 41 PM](https://user-images.githubusercontent.com/89033220/139757849-724c82bf-1043-470c-a833-d1c16a7dc1d5.png)
+![Screen Shot 2021-11-02 at 1 52 49 PM](https://user-images.githubusercontent.com/89033220/139950441-8cf63e71-c3ce-4f96-94d6-ff69b40a333b.png)
+![Screen Shot 2021-11-02 at 1 52 54 PM](https://user-images.githubusercontent.com/89033220/139950447-349de2dd-def5-4dcd-9df3-ae1f2bf3a4f1.png)
+![Screen Shot 2021-11-02 at 1 56 19 PM](https://user-images.githubusercontent.com/89033220/139950455-be5cdf69-8d39-45bb-93e6-eb7945d95f9a.png)
+![Screen Shot 2021-11-02 at 1 56 25 PM](https://user-images.githubusercontent.com/89033220/139950464-ba44ad9b-e1e1-4e59-b265-9ce0586aaf11.png)
 
 ## Component Hierarchy
 
-
-![Screen Shot 2021-11-01 at 5 03 08 PM](https://user-images.githubusercontent.com/89033220/139758150-d5e3d27b-6a37-40cf-b08f-2051323fbec0.png)
-
+![Screen Shot 2021-11-02 at 1 59 36 PM](https://user-images.githubusercontent.com/89033220/139950838-98c56826-9fb2-4a5e-84c7-70ba5a67d65c.png)
 
 ## ERD (Entity Relationship Diagram)
-![Screen Shot 2021-11-01 at 4 18 15 PM](https://user-images.githubusercontent.com/89033220/139754539-82e9ad90-1f05-40d6-b5c4-e790f2cd3f18.png)
 
+![Screen Shot 2021-11-02 at 1 45 32 PM](https://user-images.githubusercontent.com/89033220/139950494-f55d6d70-d708-4daa-9c3e-feb5a0f20850.png)
 
 ## Additional Technologies
 
