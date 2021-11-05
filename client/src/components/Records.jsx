@@ -10,14 +10,14 @@ const Records = () => {
 
     return(
         <section>
-            {records.map(record) => (
+            {records.map((record) => (
                 <div>
                     <img src={record.albumArt} alt="album cover art"></img>
                     <h3>{record.name}</h3>
                     <h4>{record.yearPressed}</h4>
                     <h5>{record.catalogNumber}</h5>
                 </div>
-            )}
+            ))}
         </section>
     )
 }
