@@ -42,20 +42,20 @@ export const logout = async () => {
   }
 }
 
+export const getAllRecords = async () => {
+  try {
+    const response = await axios.get(`${apiURL}/records/`);
+    return response.data;
+  } catch (error) {
+    console.error(error.message);
+  }
+}
 
-// export const getAllCartoons = async () => {
-//   try {
-//     const response = await axios.get(`${apiURL}/cartoons/`);
-//     return response.data;
-//   } catch (error) {
-//     console.error(error.message);
-//   }
-// }
 
-
-// export const createCartoon = async (newCartoon) => {
-//   try {
-//     await axios.post(`${apiURL}/cartoons/`, newCartoon);
-//   } catch (error) {
-//     console.error(error.message);
-//   }
+export const createRecord = async (newRecord) => {
+  try {
+    await axios.post(`${apiURL}/records/`, newRecord);
+  } catch (error) {
+    console.error(error.message);
+  }
+}
