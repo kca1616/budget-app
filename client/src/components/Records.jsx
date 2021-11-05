@@ -21,3 +21,5 @@ const Records = () => {
         </section>
     )
 }
+
+export default Records;
