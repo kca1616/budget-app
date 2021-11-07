@@ -41,3 +41,11 @@ def add_collection(record_id):
         return jsonify(user_dict), 201
     except DoesNotExist:
         return jsonify(message="Error getting record."), 500
+
+@record.route('/<int:record_id>', methods=['DELETE'])
+@login_required
+def delete_record(record_id):
+        (Record
+            .delete()
+            .where(Record.id==record_id).execute())
+        return jsonify(message="YASSSS"), 204
