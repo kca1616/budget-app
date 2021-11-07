@@ -51,11 +51,18 @@ export const getAllRecords = async () => {
   }
 }
 
-
 export const createRecord = async (newRecord) => {
   try {
-    await axios.post(`${apiURL}/records/`, newRecord);
+    await axios.post(`${apiURL}/api/records/`, newRecord);
   } catch (error) {
+    console.error(error.message);
+  }
+}  
+
+export const deleteRecord = async (recordID) => {
+  try {
+    await axios.delete(`${apiURL}/api/records/${recordID}`);
+  } catch(error) {
     console.error(error.message);
   }
 }

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useHistory } from 'react-router-dom';
-import { getAllRecords } from "../services";
+import { getAllRecords, deleteRecord } from "../services";
 
 const Records = (props) => {
     const [records, setRecords] = useState([]);
@@ -23,6 +23,7 @@ const Records = (props) => {
                     <h3>{record.name}</h3>
                     <h4>{record.year_pressed}</h4>
                     <h5>{record.catalog_number}</h5>
+                    <button>Delete</button>
                 </div>
             ))}
         </section>
