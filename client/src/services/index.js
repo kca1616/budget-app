@@ -44,7 +44,7 @@ export const logout = async () => {
 
 export const getAllRecords = async () => {
   try {
-    const response = await axios.get(`${apiURL}/records/`);
+    const response = await axios.get(`${apiURL}/api/records/`);
     return response.data;
   } catch (error) {
     console.error(error.message);

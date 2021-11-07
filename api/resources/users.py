@@ -35,7 +35,7 @@ def login():
         user_dict = model_to_dict(user)
 
         if check_password_hash(user_dict['password'], body['password']):
-            login_user()
+            login_user(user)
             del user_dict['password']
             return jsonify(user_dict), 200
 

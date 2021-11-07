@@ -7,15 +7,17 @@ const NewRecord = () => {
     const [yearPressed, setYearPressed] = useState("");
     const [catalogNumber, setCatalogNumber] = useState("");
     const [albumArt, setAlbumArt] = useState("");
+    const [notes, setNotes] = useState("");
     const history = useHistory();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         const newRecord = {
-            name,
+            name: name,
             year_pressed: yearPressed,
             catalog_number: catalogNumber,
-            album_art: albumArt
+            album_art: albumArt,
+            notes: notes
         }
         await createRecord(newRecord);
         history.push("/records");
@@ -53,6 +55,14 @@ const NewRecord = () => {
                 type="text"
                 value={albumArt}
                 onChange={(e) => setAlbumArt(e.target.value)}
+                required
+            />
+            <label htmlFor = "notes">Notes:</label>
+            <input
+                id="notes"
+                type="text"
+                value={notes}
+                onChange={(e) => setNotes(e.target.value)}
                 required
             />
             <button type="submit">Submit</button>
