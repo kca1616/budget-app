@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import { getAllRecords, deleteRecord } from "../services";
 
 const Records = (props) => {
@@ -27,6 +27,7 @@ const Records = (props) => {
                     <h3>{record.name}</h3>
                     <h4>{record.year_pressed}</h4>
                     <h5>{record.catalog_number}</h5>
+                    <Link to={`/edit/${record.id}`}><button>Edit</button></Link>
                     <button onClick={handleDelete(record.id)}>Delete</button>
                 </div>
             ))}
