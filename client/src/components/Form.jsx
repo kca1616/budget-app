@@ -1,14 +1,34 @@
 import { useState } from "react";
+import { useParams } from "react-router";
+import { createRecord, updateRecord } from "../services";
 
-const Form = (props) => {
+const Form = () => {
     const [name, setName] = useState("");
     const [yearPressed, setYearPressed] = useState("");
     const [catalogNumber, setCatalogNumber] = useState("");
     const [albumArt, setAlbumArt] = useState("");
     const [notes, setNotes] = useState("");
+    const params = useParams();
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const newRecord = {
+            name: name,
+            year_pressed: yearPressed,
+            catalog_number: catalogNumber,
+            album_art: albumArt,
+            notes: notes
+        }
+        if(params.id){
+            await updateRecord(params.id, newRecord);
+        } else {
+            await createRecord(newRecord);
+        }
+        history.push("/records");
+    }
 
     return (
-        <form onSubmit={props.handleSubmit}>
+        <form onSubmit={handleSubmit}>
             <label htmlFor="name">Name:</label>
             <input
                 id="name"
