@@ -16,7 +16,7 @@ form {
 
 nav {
   background-color: #ADD8E6;
-  padding: 20px;
+  padding: 10px;
 }
 
 a{
@@ -44,3 +44,24 @@ button:hover {
 .navItem:hover {
   font-weight: bolder;
 }
+
+@media only screen and (max-width: 415px){
+  h1{
+    font-size: 25px;
+  }
+  
+  form {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    width: 280px;
+    margin: 0 auto;
+    grid-row-gap: 8px;
+    font-size: 12px;
+    padding: 10px;
+    font-weight: bold;
+  }
+
+  img {
+    max-width: 100%;
+  }
+} 
