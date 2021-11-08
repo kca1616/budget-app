@@ -63,6 +63,15 @@ def add_wishlist(record_id):
     except DoesNotExist:
         return jsonify(message="Error getting record."), 500
 
+@record.route('/favorites/<int:record_id>', methods= ['DELETE'])
+@login_required
+def delete_wishlist(record_id):
+    (Favorite
+            .delete()
+            .where((Favorite.record==record_id) & (Favorite.user == current_user.id)).execute())
+    return jsonify(message="YASSSS"), 204
+
+
 @record.route('/<int:record_id>', methods=['DELETE'])
 @login_required
 def delete_record(record_id):
