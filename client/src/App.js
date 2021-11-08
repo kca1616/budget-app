@@ -16,7 +16,7 @@ function App() {
       <Nav user={user} setUser={setUser} />
       <Switch>
         <main>
-          <Route path = "/">
+          <Route exact path = "/">
             <Home />
           </Route>
           <Route path="/register">
