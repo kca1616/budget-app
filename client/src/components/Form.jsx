@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useParams } from "react-router";
 import { createRecord, updateRecord } from "../services";
+import { useHistory } from 'react-router-dom';
 
 const Form = () => {
     const [name, setName] = useState("");
@@ -9,6 +10,7 @@ const Form = () => {
     const [albumArt, setAlbumArt] = useState("");
     const [notes, setNotes] = useState("");
     const params = useParams();
+    const history = useHistory();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
