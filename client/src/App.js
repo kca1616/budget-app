@@ -5,8 +5,9 @@ import Login from "./components/Login";
 import Nav from "./components/Nav";
 import Register from "./components/Register";
 import NewRecord from './screens/NewRecord';
+import EditRecord from './screens/EditRecord';
 import Records from './components/Records';
-import { getAllRecords } from './services';
+
 function App() {
   const [user, setUser] = useState(null);
   return (
@@ -23,6 +24,9 @@ function App() {
           <Route path="/new">
             <NewRecord />
           </Route>
+          <Route path = '/edit'>
+            <EditRecord />
+          </Route>  
           <Route path="/records">
             <Records user={user} />
           </Route>
