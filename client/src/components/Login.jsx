@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { login } from "../services";
+import { useHistory } from 'react-router-dom';
 
 const Login = (props) => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const history = useHistory;
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -13,6 +15,7 @@ const Login = (props) => {
         };
         const user = await login(userInfo);
         props.setUser(user);
+        history.push('/');
     }
 
     return (
@@ -35,7 +38,7 @@ const Login = (props) => {
                     onChange={(e) => setPassword(e.target.value)}
                     required
                 />
-                <button type="submit">Sign up!</button>
+                <button type="submit">Log in!</button>
             </form>
         </section>
     );
