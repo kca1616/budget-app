@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { useHistory} from 'react-router-dom';
-import { getAllRecords, deleteRecord } from "../services";
+import { getFavorites, deleteFavorite} from "../services";
 
-const Records = (props) => {
-    const [records, setRecords] = useState([]);
+const Wishlist = (props) => {
+    const [favorites, setFavorites] = useState([]);
     const history = useHistory();
 
     useEffect(() => {
         if(props.user){
-            getAllRecords().then((fetchedRecords) => setRecords(fetchedRecords));
+            getFavorites().then((fetchedFavorites) => setFavorites(fetchedFavorites));
         }else{
             history.push('/');
         }
@@ -16,12 +16,12 @@ const Records = (props) => {
     }, []);
 
     const handleDelete = async (record) => {
-        await deleteRecord(record)
+        await deleteFavorite(record)
     }
 
     return(
         <section>
-            {records?.map((record) => (
+            {favorites?.map((record) => (
                 <div>
                     <img src={record.album_art} alt="album cover art"></img>
                     <h3>{record.name}</h3>
