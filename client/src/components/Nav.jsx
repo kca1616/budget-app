@@ -3,7 +3,7 @@ import { logout } from "../services";
 
 
 const Nav = (props) => {
-    history = useHistory();
+    const history = useHistory();
 
     const handleClick = async () => {
         await logout();
