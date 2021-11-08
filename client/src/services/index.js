@@ -53,7 +53,7 @@ export const getAllRecords = async () => {
 
 export const createRecord = async (newRecord) => {
   try {
-    await axios.post(`${apiURL}/api/records/`, newRecord);
+    await axios.post(`${apiURL}/api/records/new`, newRecord);
   } catch (error) {
     console.error(error.message);
   }

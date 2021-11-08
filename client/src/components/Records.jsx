@@ -15,6 +15,10 @@ const Records = (props) => {
         
     }, []);
 
+    const handleDelete = async (record) => {
+        await deleteRecord(record)
+    }
+
     return(
         <section>
             {records?.map((record) => (
@@ -23,7 +27,7 @@ const Records = (props) => {
                     <h3>{record.name}</h3>
                     <h4>{record.year_pressed}</h4>
                     <h5>{record.catalog_number}</h5>
-                    <button>Delete</button>
+                    <button onClick={handleDelete(record.id)}>Delete</button>
                 </div>
             ))}
         </section>
