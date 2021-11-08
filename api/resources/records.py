@@ -14,7 +14,7 @@ record = Blueprint('records', __name__, url_prefix='/api/records')
 @login_required
 def get_all_records():
     try:
-        records = [model_to_dict(record) for record in Record]
+        records = [model_to_dict(record) for record in Record.select()]
         return jsonify(records), 200
     except DoesNotExist:
         return jsonify(message="Error getting records."), 500
@@ -38,14 +38,14 @@ def update_record(record_id):
     except DoesNotExist:
         return jsonify(message="Error finding record."), 500
 
-@record.route('/search/<int:record_id>', methods=['POST'])
+@record.route('/new-favorite/<int:record_id>', methods=['POST'])
 @login_required
-def add_collection(record_id):
+def add_wishlist(record_id):
     try:
         record = Record.get_by_id(record_id)
         if Favorite.get_or_none(Favorite.user == current_user.id, Favorite.record == record.id) != None:
-            return jsonify(message="This pressing already exists!"), 400
-        Favorite.create(user=current_user, record=record, in_wishlist=False)
+            return jsonify(message="This pressing already exists in wishlist!"), 400
+        Favorite.create(user=current_user, record=record)
         user = User.get_by_id(current_user.id)
         user_dict = model_to_dict(user, backrefs=True)
         del user_dict['password']

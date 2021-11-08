@@ -7,7 +7,7 @@ from user import User
 class Favorite(Model):
     record = ForeignKeyField(Record, backref='favorites')
     user = ForeignKeyField(User, backref='favorites')
-    in_wishlist = BooleanField
+    in_wishlist = BooleanField(default=True)
 
     class Meta:
         database = DATABASE
