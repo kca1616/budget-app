@@ -43,10 +43,11 @@ def update_record(record_id):
 def add_wishlist(record_id):
     try:
         record = Record.get_by_id(record_id)
+        user = User.get_by_id(current_user.id)
         if Favorite.get_or_none(Favorite.user == current_user.id, Favorite.record == record.id) != None:
             return jsonify(message="This pressing already exists in wishlist!"), 400
         Favorite.create(user=current_user, record=record)
-        user = User.get_by_id(current_user.id)
+        
         user_dict = model_to_dict(user, backrefs=True)
         del user_dict['password']
         return jsonify(user_dict), 201
