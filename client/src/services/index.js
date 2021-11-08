@@ -57,10 +57,10 @@ export const createRecord = async (newRecord) => {
   } catch (error) {
     console.error(error.message);
   }
-}  
+}
 
 export const updateRecord = async (recordID, recordInfo) => {
-  try{
+  try {
     await axios.put(`${apiURL}/api/edit/${recordID}`, recordInfo);
   } catch (error) {
     console.error(error.message);
@@ -70,16 +70,16 @@ export const updateRecord = async (recordID, recordInfo) => {
 export const deleteRecord = async (recordID) => {
   try {
     await axios.delete(`${apiURL}/api/records/${recordID}`);
-  } catch(error) {
+  } catch (error) {
     console.error(error.message);
   }
 }
 
 export const getFavorites = async => {
   try {
-   const response =  await axios.get(`${apiURL}/api/records/favorites`);
-   return response.data;
-  }catch(error) {
+    const response = await axios.get(`${apiURL}/api/records/favorites`);
+    return response.data;
+  } catch (error) {
     console.error(error.message);
   }
 }
@@ -87,6 +87,14 @@ export const getFavorites = async => {
 export const addFavorite = async (recordID) => {
   try {
     await axios.post(`${apiURL}/api/records/new-favorite`, recordID);
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+
+export const deleteFavorite = async (recirdID) => {
+  try {
+    await axios.delete(`${apiURL}/api/records/favorites/${recordID}`);
   } catch(error){
     console.error(error.message);
   }
