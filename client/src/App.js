@@ -4,7 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import Login from "./components/Login";
 import Nav from "./components/Nav";
 import Register from "./components/Register";
-import NewRecord from './components/NewRecord';
+import NewRecord from './screens/NewRecord';
 import Records from './components/Records';
 import { getAllRecords } from './services';
 function App() {
