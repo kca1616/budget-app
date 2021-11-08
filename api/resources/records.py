@@ -27,6 +27,17 @@ def add_record():
     # Favorite.create(record=record, user=current_user)
     return jsonify(model_to_dict(record)), 201
 
+@record.route('/edit/<int:record_id>', methods=['PUT'])
+@login_required
+def update_record(record_id):
+    try:
+        body = request.get_json()
+        Record.update(**body).where(Record.id == record_id).execute()
+        record = Record.get_by_id(record_id)
+        return jsonify(model_to_dict(record)), 201
+    except DoesNotExist:
+        return jsonify(message="Error finding record."), 500
+
 @record.route('/search/<int:record_id>', methods=['POST'])
 @login_required
 def add_collection(record_id):

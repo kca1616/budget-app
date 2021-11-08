@@ -59,6 +59,14 @@ export const createRecord = async (newRecord) => {
   }
 }  
 
+export const updateRecord = async (recordID, recordInfo) => {
+  try{
+    await axios.put(`${apiURL}/api/edit/${recordID}`, recordInfo);
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+
 export const deleteRecord = async (recordID) => {
   try {
     await axios.delete(`${apiURL}/api/records/${recordID}`);
