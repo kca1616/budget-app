@@ -13,7 +13,6 @@ const Nav = (props) => {
             <Link to="/login">Login</Link>
             <Link to="/register">Register</Link>
             <Link to="/new">Add a new Record/Pressing</Link>
-            <Link to="/edit">Edit a Record/Pressing</Link>
             <Link to="/records">Records</Link>
             <button onClick={handleClick}>Log Out</button>
         </nav>

@@ -7,6 +7,7 @@ import Register from "./components/Register";
 import NewRecord from './screens/NewRecord';
 import EditRecord from './screens/EditRecord';
 import Records from './components/Records';
+import Home from './screens/Home';
 
 function App() {
   const [user, setUser] = useState(null);
