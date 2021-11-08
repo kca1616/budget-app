@@ -47,10 +47,9 @@ def add_wishlist(record_id):
         if Favorite.get_or_none(Favorite.user == current_user.id, Favorite.record == record.id) != None:
             return jsonify(message="This pressing already exists in wishlist!"), 400
         Favorite.create(user=current_user, record=record)
-        
         user_dict = model_to_dict(user, backrefs=True)
         del user_dict['password']
-        return jsonify(user_dict), 201
+        return jsonify(message="Favorite created!"), 201
     except DoesNotExist:
         return jsonify(message="Error getting record."), 500
 
