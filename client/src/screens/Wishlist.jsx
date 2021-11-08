@@ -34,4 +34,4 @@ const Wishlist = (props) => {
     )
 }
 
-export default Records;
+export default Wishlist;

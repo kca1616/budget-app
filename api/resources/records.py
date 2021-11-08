@@ -43,7 +43,7 @@ def update_record(record_id):
 def get_favorites():
     try:
         user = User.get(current_user.id)
-        records = [model_to_dict(record) for record in Favorite.select().where(Favorite.user == user)]
+        records = [model_to_dict(record) for record in Favorite.select(Favorite.record).where(Favorite.user == user)]
         return jsonify(records), 200
     except DoesNotExist:
         return jsonify(message="womp womp"), 500
