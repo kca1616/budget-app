@@ -75,7 +75,7 @@ export const deleteRecord = async (recordID) => {
   }
 }
 
-export const getFavorites = async => {
+export const getFavorites = async () => {
   try {
     const response = await axios.get(`${apiURL}/api/records/favorites`);
     return response.data;
@@ -86,13 +86,13 @@ export const getFavorites = async => {
 
 export const addFavorite = async (recordID) => {
   try {
-    await axios.post(`${apiURL}/api/records/new-favorite`, recordID);
+    await axios.post(`${apiURL}/api/records/new-favorite/${recordID}`);
   } catch (error) {
     console.error(error.message);
   }
 }
 
-export const deleteFavorite = async (recirdID) => {
+export const deleteFavorite = async (recordID) => {
   try {
     await axios.delete(`${apiURL}/api/records/favorites/${recordID}`);
   } catch(error){

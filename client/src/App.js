@@ -8,6 +8,7 @@ import NewRecord from './screens/NewRecord';
 import EditRecord from './screens/EditRecord';
 import Records from './components/Records';
 import Home from './screens/Home';
+import Wishlist from './screens/Wishlist';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -28,6 +29,9 @@ function App() {
           <Route path="/new">
             <NewRecord />
           </Route>
+          <Route path="/wishlist">
+            <Wishlist user={user}/>
+          </Route>  
           <Route path = '/edit'>
             <EditRecord />
           </Route>  
