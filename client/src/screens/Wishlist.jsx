@@ -5,6 +5,7 @@ import { getFavorites, deleteFavorite} from "../services";
 const Wishlist = (props) => {
     const [favorites, setFavorites] = useState([]);
     const history = useHistory();
+    const records = favorites.map(fave => fave.record);
 
     useEffect(() => {
         if(props.user){
@@ -21,7 +22,7 @@ const Wishlist = (props) => {
 
     return(
         <section>
-            {favorites?.map((record) => (
+            {records.map((record) => (
                 <div>
                     <img src={record.album_art} alt="album cover art"></img>
                     <h3>{record.name}</h3>
