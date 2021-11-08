@@ -13,12 +13,12 @@ const Nav = (props) => {
 
     return (
         <nav>
-            <Link to="/">Home</Link>
-            <Link to="/login">Login</Link>
-            <Link to="/register">Register</Link>
-            <Link to="/new">Add a new Record/Pressing</Link>
-            <Link to ="/wishlist">Wishlist</Link>
-            <Link to="/records">Records</Link>
+            <Link to="/" className="navItem">Home</Link>
+            <Link to="/login" className="navItem">Login</Link>
+            <Link to="/register" className="navItem">Register</Link>
+            <Link to="/new" className="navItem">Add a new Record/Pressing</Link>
+            <Link to ="/wishlist" className="navItem">Wishlist</Link>
+            <Link to="/records" className="navItem">Records</Link>
             <button onClick={handleClick}>Log Out</button>
         </nav>
     );

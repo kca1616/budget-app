@@ -13,3 +13,17 @@ form {
   padding: 10px;
   font-weight: bold;
 }
+
+nav {
+  background-color: #ADD8E6;
+  padding: 20px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.navItem {
+  padding: 8px;
+  color: black;
+}
