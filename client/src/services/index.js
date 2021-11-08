@@ -74,3 +74,20 @@ export const deleteRecord = async (recordID) => {
     console.error(error.message);
   }
 }
+
+export const getFavorites = async => {
+  try {
+   const response =  await axios.get(`${apiURL}/api/records/favorites`);
+   return response.data;
+  }catch(error) {
+    console.error(error.message);
+  }
+}
+
+export const addFavorite = async (recordID) => {
+  try {
+    await axios.post(`${apiURL}/api/records/new-favorite`, recordID);
+  } catch(error){
+    console.error(error.message);
+  }
+}
