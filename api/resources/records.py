@@ -7,7 +7,6 @@ from record import Record
 from favorite import Favorite
 from user import User
 
-# how do we make our blueprint?
 record = Blueprint('records', __name__, url_prefix='/api/records')
 
 @record.route('/', methods=['GET'])
@@ -24,7 +23,6 @@ def get_all_records():
 def add_record():
     body = request.get_json()
     record = Record.create(**body)
-    # Favorite.create(record=record, user=current_user)
     return jsonify(model_to_dict(record)), 201
 
 @record.route('/edit/<int:record_id>', methods=['PUT'])
