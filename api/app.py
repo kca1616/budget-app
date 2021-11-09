@@ -53,14 +53,11 @@ app.register_blueprint(user)
 
 origins=['http://localhost:3000']
 
-# if we're on heroku
+
 if 'DATABASE_URL' in os.environ:
     initialize([Record, User, Favorite])
-    # configure cookie to only work on secure connections (HTTPS)
     app.config['SESSION_COOKIE_SECURE'] = True
-    # configure cookie to NOT work on unsecure connections (HTTP)
     app.config['SESSION_COOKIE_HTTPONLY'] = False
-    # allowing the cookie to come from a different site
     app.config['SESSION_COOKIE_SAMESITE'] = 'None'
     # fetching the client url from an environment variable
     origins.append(os.environ.get('CLIENT_URL'))
