@@ -4,7 +4,7 @@ from peewee import DoesNotExist
 from flask_bcrypt import check_password_hash, generate_password_hash
 from flask_login import login_user
 from playhouse.shortcuts import model_to_dict
-from user import User
+from models.user import User
 
 user = Blueprint('users', __name__, url_prefix='/auth')
 

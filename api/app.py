@@ -4,9 +4,9 @@ from flask_login import LoginManager
 import os
 
 from db import DATABASE, initialize
-from record import Record
-from favorite import Favorite
-from user import User
+from models.record import Record
+from models.favorite import Favorite
+from models.user import User
 from resources.records import record
 from resources.users import user
 

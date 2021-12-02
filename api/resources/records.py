@@ -3,9 +3,9 @@ from flask_login import current_user, login_required
 from peewee import DoesNotExist
 from playhouse.shortcuts import model_to_dict
 
-from record import Record
-from favorite import Favorite
-from user import User
+from models.record import Record
+from models.favorite import Favorite
+from models.user import User
 
 record = Blueprint('records', __name__, url_prefix='/api/records')
 
