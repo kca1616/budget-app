@@ -7,8 +7,10 @@ from db import DATABASE, initialize
 from models.record import Record
 from models.favorite import Favorite
 from models.user import User
+from models.marketplace import Marketplace
 from resources.records import record
 from resources.users import user
+from resources.marketplace import marketplace
 
 DEBUG = True
 PORT = 8000
@@ -43,6 +45,7 @@ def index():
 
 app.register_blueprint(record)
 app.register_blueprint(user)
+app.register_blueprint(marketplace)
 
 origins=['http://localhost:3000']
 
@@ -58,5 +61,5 @@ CORS(app, origins=origins, supports_credentials=True)
 
 
 if __name__ == '__main__':
-    initialize([Record, User, Favorite])
+    initialize([Record, User, Favorite, Marketplace])
     app.run(debug=DEBUG, port=PORT)
