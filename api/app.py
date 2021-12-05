@@ -22,6 +22,7 @@ app = Flask(__name__)
 app.secret_key = os.environ.get('SECRET') or 'recordslongconfusingkey'
 login_manager.init_app(app)
 
+
 @login_manager.user_loader
 def load_user(userid):
     try:
@@ -29,25 +30,29 @@ def load_user(userid):
     except:
         return None
 
+
 @app.before_request
 def before_request():
     g.db = DATABASE
     g.db.connect()
+
 
 @app.after_request
 def after_request(response):
     g.db.close()
     return response
 
+
 @app.route('/')
 def index():
     return 'Welcome to Record App!'
+
 
 app.register_blueprint(record)
 app.register_blueprint(user)
 app.register_blueprint(marketplace)
 
-origins=['http://localhost:3000']
+origins = ['http://localhost:3000']
 
 
 if 'DATABASE_URL' in os.environ:

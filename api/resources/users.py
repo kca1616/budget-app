@@ -8,6 +8,7 @@ from models.user import User
 
 user = Blueprint('users', __name__, url_prefix='/auth')
 
+
 @user.route('/register', methods=['POST'])
 def register():
     body = request.get_json()
@@ -15,7 +16,7 @@ def register():
         User.get(User.username == body['username'])
         return jsonify(message='Username already taken!!')
     except DoesNotExist:
-        #hash the password
+        # hash the password
         body['password'] = generate_password_hash(body['password'])
 
         user = User.create(**body)
@@ -25,6 +26,7 @@ def register():
         del user_dict['password']
 
         return jsonify(user_dict), 201
+
 
 @user.route('/login', methods=['POST'])
 def login():
@@ -43,6 +45,7 @@ def login():
             return jsonify(message='Username or password is incorrect!')
     except DoesNotExist:
         return jsonify(message='Username or password is incorrect.'), 401
+
 
 @user.route('/logout')
 @login_required
