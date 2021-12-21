@@ -1,6 +1,6 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Link} from "react-router-dom";
 import Login from "./components/Login";
 import Nav from "./components/Nav";
 import Register from "./components/Register";
@@ -14,6 +14,7 @@ function App() {
   const [user, setUser] = useState(null);
   return (
     <div className="App">
+      <h1><Link to="/" className="navItem">First Press</Link></h1>
       <Nav user={user} setUser={setUser} />
       <Switch>
         <main>

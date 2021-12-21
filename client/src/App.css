@@ -5,17 +5,21 @@ body{
 
 form {
   display: grid;
-  grid-template-columns: 2fr 7fr;
-  width: 600px;
+  grid-template-columns: 3fr 6fr;
+  min-width: 350px;
+  max-width: 550px;
   margin: 0 auto;
   grid-row-gap: 8px;
   font-size: 18px;
-  padding: 10px;
+  padding: 10px 10px 10px 0px;
   font-weight: bold;
+  column-gap: 6px;
+  box-sizing: border-box;
 }
 
+
 nav {
-  background-color: #ADD8E6;
+  background-color: #f09d47;
   padding: 10px;
 }
 
@@ -26,7 +30,7 @@ a{
 button {
   padding: 8px;
   border: 0;
-  background-color: rgba(93, 153, 243, 0.5);
+  background-color: #e3d8e3;
   color: black;
   margin: 5px 5px 5px 5px;
 }
@@ -34,6 +38,21 @@ button {
 button:hover {
   box-shadow: inset 0 0 0 50px rgba(0, 0, 0, 0.2);
   font-weight: bold;
+}
+
+h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 80px;
+  background-color: #f09d47;
+  margin: 0px;
+}
+
+.form-container{
+ width: 100%
+}
+
+.home{
+  background-color: #f09d47;
 }
 
 .navItem {
@@ -45,13 +64,31 @@ button:hover {
   font-weight: bolder;
 }
 
-/* .home {
-  background-image: url("https://images.pexels.com/photos/167092/pexels-photo-167092.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  height: 100%;
-  padding-top: 125px;
-  padding-bottom: 125px;
-  background-position: left 20px;
-} */
+br{
+  margin: 0px;
+}
+
+#cover-photo{
+  width: 100%;
+}
+.home-bottom{
+  padding: 100px;
+}
+
+#title{
+  margin: 0px;
+  color: black;
+}
+
+.login{
+  width: 200px;
+  height: 120px;
+}
+
+.register{
+  width: 200px;
+  height: 150px;
+}
 
 @media only screen and (max-width: 415px){
   h1{

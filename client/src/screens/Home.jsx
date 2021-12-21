@@ -1,8 +1,12 @@
 const Home = () => {
-    return(
+    return (
         <div className="home">
-        <h1>Welcome to Record App!</h1>
+            <img id="cover-photo" src="https://i.imgur.com/YUh44Gb.png" />
+            <div className="home-bottom">
+                <br></br>
+            </div>
         </div>
+
     )
 }
 

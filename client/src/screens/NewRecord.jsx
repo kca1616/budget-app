@@ -3,7 +3,7 @@ import Form from '../components/Form.jsx';
 const NewRecord = () => {
     return (
         <div>
-        <header>Create a New Record! Wow!</header>
+        <header>Add a new pressing to the library:</header>
         <Form/>
         </div>
     );

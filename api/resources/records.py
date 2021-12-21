@@ -9,6 +9,7 @@ from models.user import User
 
 record = Blueprint('records', __name__, url_prefix='/api/records')
 
+
 @record.route('/', methods=['GET'])
 @login_required
 def get_all_records():
@@ -18,12 +19,14 @@ def get_all_records():
     except DoesNotExist:
         return jsonify(message="Error getting records."), 500
 
+
 @record.route('/new', methods=['POST'])
 @login_required
 def add_record():
     body = request.get_json()
     record = Record.create(**body)
     return jsonify(model_to_dict(record)), 201
+
 
 @record.route('/edit/<int:record_id>', methods=['PUT'])
 @login_required
@@ -36,15 +39,18 @@ def update_record(record_id):
     except DoesNotExist:
         return jsonify(message="Error finding record."), 500
 
+
 @record.route('/favorites', methods=['GET'])
 @login_required
 def get_favorites():
     try:
         user = User.get(current_user.id)
-        records = [model_to_dict(record) for record in Favorite.select().where(Favorite.user == user)]
+        records = [model_to_dict(record) for record in Favorite.select().where(
+            Favorite.user == user)]
         return jsonify(records), 200
     except DoesNotExist:
         return jsonify(message="womp womp"), 500
+
 
 @record.route('/new-favorite/<int:record_id>', methods=['POST'])
 @login_required
@@ -61,19 +67,20 @@ def add_wishlist(record_id):
     except DoesNotExist:
         return jsonify(message="Error getting record."), 500
 
-@record.route('/favorites/<int:record_id>', methods= ['DELETE'])
+
+@record.route('/favorites/<int:record_id>', methods=['DELETE'])
 @login_required
 def delete_wishlist(record_id):
     (Favorite
-            .delete()
-            .where((Favorite.record==record_id) & (Favorite.user == current_user.id)).execute())
+    .delete()
+    .where((Favorite.record == record_id) & (Favorite.user == current_user.id)).execute())
     return jsonify(message="YASSSS"), 204
 
 
 @record.route('/<int:record_id>', methods=['DELETE'])
 @login_required
 def delete_record(record_id):
-        (Record
-            .delete()
-            .where(Record.id==record_id).execute())
-        return jsonify(message="YASSSS"), 204
+    (Record
+        .delete()
+        .where(Record.id == record_id).execute())
+    return jsonify(message="YASSSS"), 204
