@@ -22,7 +22,7 @@ const Records = (props) => {
     return(
         <section>
             {records?.map((record) => (
-                <div>
+                <div className = "record-library">
                     <img src={record.album_art} alt="album cover art"></img>
                     <h3>{record.name}</h3>
                     <h4>{record.year_pressed}</h4>

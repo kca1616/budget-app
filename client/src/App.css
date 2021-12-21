@@ -16,7 +16,16 @@ form {
   column-gap: 6px;
   box-sizing: border-box;
 }
+header{
+  font-weight: bold;
+  margin: 20px 0px 20px 0px;
+}
 
+input{
+  border-style: solid;
+  border-width: 2px;
+  height: 30px;
+}
 
 nav {
   background-color: #f09d47;
@@ -62,6 +71,10 @@ h1 {
 
 .navItem:hover {
   font-weight: bolder;
+}
+
+.record-library{
+  margin-top: 20px;
 }
 
 br{
