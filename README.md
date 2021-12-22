@@ -2,7 +2,7 @@
 
 ## Project Name
 
-Record App
+First Press
 
 ## Project Description
 
@@ -23,61 +23,45 @@ A web platform where users can make wishlists for records that they want.
 
 ![Screen Shot 2021-11-02 at 1 45 32 PM](https://user-images.githubusercontent.com/89033220/139950494-f55d6d70-d708-4daa-9c3e-feb5a0f20850.png)
 
-## Additional Technologies
+## Technologies Used
 
-https://www.discogs.com/developers
+ 1. Python 3.8
+ 2. Flask
+ 3. Postgres
+ 4. React
+ 5. Heroku
 
 ## MVP/PostMVP
 
-The functionality will then be divided into two separate lists: MVP and PostMVP.  Carefully decide what is placed into your MVP, as the client will expect this functionality to be implemented upon project completion.  
+The functionality will be divided into two separate lists: MVP and PostMVP.  
 
 #### MVP 
 
 - Find and use external api for records
 - Render data on page 
-- Have user create wishlist with CRUD capabilities
+- Provider users the ability to create wishlists with CRUD capabilities.
 
 #### PostMVP  
 
-- Add "marketplace" where users can offer up records for sale
-- Add ability with marketplace to send counter offers. 
-- Enable messaging to negotitate how things will be shipped out.
-- Give suggestions from marketplace for records that users have in wishlist 
-
-
-## Timeframes
-
-Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
-
-Time frames are also key in the development cycle.  You have limited time to code all parts of your app.  Your estimates can then be used to evalute possibilities based on time needed and the actual time you have before the app must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add an additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
-
-| Component | Priority | Estimated Time | Time Invested | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
-| Adding Wishlist Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with Record API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Edit wishlist | H | 3hrs| 2.5hrs | 2.5hrs |
-| Delete wishlist | H | 3hrs| 2.5hrs | 2.5hrs |
-| Render wishlist| H | 2hrs| 2.5hrs | 2.5hrs |
-| User login/auth | H | 3hrs| 2.5hrs | 2.5hrs |
-| Adding marketplace | H | 3hrs| 2.5hrs | 2.5hrs |
-| Adding messaging | H | 3hrs| 2.5hrs | 2.5hrs |
-| Adding marketplace suggestions | H | 3hrs| 2.5hrs | 2.5hrs |
-| Set up a DB connection | H | 3hrs| 2.5hrs | 2.5hrs |
-| Deployment | L | 1hr| 2.5hrs | 2.5hrs |
-| Login/registration form | M | 3hrs| 2.5hrs | 2.5hrs |
-| Set up psql database | H | 3hrs | 2.5 hrs | 2.5 hrs |
-| Total | H | 36hrs| 5hrs | 5hrs |
+- Add "Marketplace" where users can offer up records for sale.
+- Add "Offer" feature to marketplace to send counter offers. 
+- Add "Messaging" to negotiate sales and how the purchased items will be shipped out.
+- Provide suggestions from marketplace for records that users have in wishlist.
 
 ## SWOT Analysis
 
 #### Strengths: 
-Passionate about vinyl records, so I will maintin interest in this. Good with front-end.
+
+ - Passionate about vinyl records, so I will be interested in the
+   project and continue to develop my platform.  
+ - Good with front-end development.
 
 #### Weaknesses:
-Rough with auth/login in Flask.
+
+ - Minimal understanding of authentication, authorization, and login
+   implementations in Flask.
 
 #### Opportunities:
-Getting to improve my auth and login abilities.
 
-#### Threats:
-I procrastinate
+ - Getting to improve on authN/Z and login processes.
+ - Learn about database optimizations.
