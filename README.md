@@ -8,20 +8,10 @@ First Press
 
 A web platform where users can make wishlists for records that they want.
 
-## Wireframes
-
-![Screen Shot 2021-11-02 at 1 52 49 PM](https://user-images.githubusercontent.com/89033220/139950441-8cf63e71-c3ce-4f96-94d6-ff69b40a333b.png)
-![Screen Shot 2021-11-02 at 1 52 54 PM](https://user-images.githubusercontent.com/89033220/139950447-349de2dd-def5-4dcd-9df3-ae1f2bf3a4f1.png)
-![Screen Shot 2021-11-02 at 1 56 19 PM](https://user-images.githubusercontent.com/89033220/139950455-be5cdf69-8d39-45bb-93e6-eb7945d95f9a.png)
-![Screen Shot 2021-11-02 at 1 56 25 PM](https://user-images.githubusercontent.com/89033220/139950464-ba44ad9b-e1e1-4e59-b265-9ce0586aaf11.png)
-
 ## Component Hierarchy
 
 ![Screen Shot 2021-11-02 at 1 59 36 PM](https://user-images.githubusercontent.com/89033220/139950838-98c56826-9fb2-4a5e-84c7-70ba5a67d65c.png)
 
-## ERD (Entity Relationship Diagram)
-
-![Screen Shot 2021-11-02 at 1 45 32 PM](https://user-images.githubusercontent.com/89033220/139950494-f55d6d70-d708-4daa-9c3e-feb5a0f20850.png)
 
 ## Technologies Used
 
