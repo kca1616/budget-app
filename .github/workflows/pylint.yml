@@ -23,4 +23,4 @@ jobs:
         pip install pylint
     - name: Analysing the code with pylint
       run: |
-        pylint --rcfile=.pylintrc --ignore-patterns="/site-packages//*.py" `ls -R|grep .py$|xargs`
+        pylint --rcfile=pylint.rc --ignore-patterns="**/site-packages/**/*.py" $(find . -name "*.py" | xargs)
