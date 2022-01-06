@@ -23,4 +23,4 @@ jobs:
         pip install pylint
     - name: Analysing the code with pylint
       run: |
-        cd api && pylint $(find . -name "*.py" | xargs)
+        pylint $(find . -name "*.py" | xargs)
