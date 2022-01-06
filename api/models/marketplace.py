@@ -1,10 +1,12 @@
-from peewee import *
+from peewee import ForeignKeyField, BooleanField, IntegerField
 
 from db import DATABASE
 from models.record import Record
 from models.user import User
+from models.base import BaseModel
 
-class Marketplace(Model):
+
+class Marketplace(BaseModel):
     record = ForeignKeyField(Record, backref='favorites')
     user = ForeignKeyField(User, backref='favorites')
     active = BooleanField(default=True)

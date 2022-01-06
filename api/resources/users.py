@@ -1,15 +1,14 @@
 from flask import Blueprint, jsonify, request
-from flask_login.utils import login_required, logout_user
 from peewee import DoesNotExist
 from flask_bcrypt import check_password_hash, generate_password_hash
-from flask_login import login_user
+from flask_login import login_user, login_required, logout_user
 from playhouse.shortcuts import model_to_dict
 from models.user import User
 
-user = Blueprint('users', __name__, url_prefix='/auth')
+userBP = Blueprint('users', __name__, url_prefix='/auth')
 
 
-@user.route('/register', methods=['POST'])
+@userBP.route('/register', methods=['POST'])
 def register():
     body = request.get_json()
     try:
@@ -28,7 +27,7 @@ def register():
         return jsonify(user_dict), 201
 
 
-@user.route('/login', methods=['POST'])
+@userBP.route('/login', methods=['POST'])
 def login():
     body = request.get_json()
     body['username'] = body['username'].lower()
@@ -47,7 +46,7 @@ def login():
         return jsonify(message='Username or password is incorrect.'), 401
 
 
-@user.route('/logout')
+@userBP.route('/logout')
 @login_required
 def logout():
     logout_user()

@@ -1,8 +1,9 @@
-from peewee import *
+from peewee import Model, ForeignKeyField, BooleanField
 
 from db import DATABASE
 from models.record import Record
 from models.user import User
+
 
 class Favorite(Model):
     record = ForeignKeyField(Record, backref='favorites')

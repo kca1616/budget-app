@@ -1,5 +1,5 @@
 from flask_login import UserMixin
-from peewee import *
+from peewee import CharField, Model
 
 from db import DATABASE
 

@@ -7,6 +7,7 @@ if 'DATABASE_URL' in os.environ:
 else:
     DATABASE = PostgresqlDatabase('records_db')
 
+
 def initialize(tables):
     DATABASE.connect()
     DATABASE.create_tables(tables, safe=True)
