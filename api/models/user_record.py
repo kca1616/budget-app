@@ -1,4 +1,5 @@
-from peewee import *
+from peewee import Model, ForeignKeyField
+from flask_login import UserMixin
 
 from db import DATABASE
 from models.record import Record

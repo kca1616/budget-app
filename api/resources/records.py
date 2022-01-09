@@ -73,8 +73,8 @@ def add_wishlist(record_id):
 @login_required
 def delete_wishlist(record_id):
     (Favorite
-     .delete()
-     .where((Favorite.record == record_id) & (Favorite.user == current_user.id)).execute())
+        .delete()
+        .where((Favorite.record == record_id) & (Favorite.user == current_user.id)).execute())
     return jsonify(message="YASSSS"), 204
 
 
