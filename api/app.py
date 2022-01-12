@@ -13,6 +13,7 @@ from models.message import Message
 from resources.records import recordBP
 from resources.users import userBP
 from resources.marketplace import marketplace
+from resources.messages import messageBP
 
 DEBUG = True
 PORT = 8000
@@ -53,6 +54,7 @@ def index():
 app.register_blueprint(recordBP)
 app.register_blueprint(userBP)
 app.register_blueprint(marketplace)
+app.register_blueprint(messageBP)
 
 origins = ['http://localhost:3000']
 

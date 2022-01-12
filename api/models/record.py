@@ -1,4 +1,4 @@
-from datetime import datetime
+import datetime
 
 from peewee import CharField, DateTimeField
 from models.base import BaseModel
