@@ -19,7 +19,9 @@ export const defaultRoute = async () => {
 export const register = async (newUser) => {
   try {
     const response = await axios.post(`${apiURL}/auth/register`, newUser);
+    console.log(response.data);
     return response.data;
+
   } catch (error) {
     console.error(error.message);
   }
@@ -53,7 +55,8 @@ export const getAllRecords = async () => {
 
 export const createRecord = async (newRecord) => {
   try {
-    return axios.post(`${apiURL}/api/records/new`, newRecord);
+    const record = await axios.post(`${apiURL}/api/records/new`, newRecord);
+    return record;
   } catch (error) {
     console.error(error.message);
   }

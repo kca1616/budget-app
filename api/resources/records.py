@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, request
 from flask_login import current_user, login_required
-from peewee import DoesNotExist
+from peewee import DoesNotExist, IntegrityError
 from playhouse.shortcuts import model_to_dict
 
 from models.record import Record
@@ -23,10 +23,12 @@ def get_all_records():
 @recordBP.route('/new', methods=['POST'])
 @login_required
 def add_record():
-    body = request.get_json()
-    record = Record.create(**body)
-    return jsonify(model_to_dict(record)), 201
-
+    try:
+        body = request.get_json()
+        record, created = Record.get_or_create(**body)
+        return jsonify(model_to_dict(record), created), 201
+    except IntegrityError:
+        return jsonify(message="Record with this catalog number already exists."), 200
 
 @recordBP.route('/edit/<int:record_id>', methods=['PUT'])
 @login_required

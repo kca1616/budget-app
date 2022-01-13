@@ -9,6 +9,7 @@ const Form = () => {
     const [catalogNumber, setCatalogNumber] = useState("");
     const [albumArt, setAlbumArt] = useState("");
     const [notes, setNotes] = useState("");
+    const [err, setErr] = useState("");
     const params = useParams();
     const history = useHistory();
 
@@ -21,12 +22,17 @@ const Form = () => {
             album_art: albumArt,
             notes: notes
         }
-        if(params.id){
+        if (params.id) {
             await updateRecord(params.id, newRecord);
+            history.push("/records");
         } else {
-            await createRecord(newRecord);
+            const res = await createRecord(newRecord);
+            if (res.data?.message) {
+                setErr("The record with this catalog number already exists.");
+            } else {
+                history.push("/records");
+            }
         }
-        history.push("/records");
     }
 
     return (
@@ -72,7 +78,10 @@ const Form = () => {
                 required
             />
             <button type="submit">Submit</button>
+            <p>{err}</p>
+
         </form>
+
     )
 
 }

@@ -56,7 +56,7 @@ app.register_blueprint(userBP)
 app.register_blueprint(marketplace)
 app.register_blueprint(messageBP)
 
-origins = ['http://localhost:3000']
+origins = ['http://localhost:3000', "*"]
 
 
 if 'DATABASE_URL' in os.environ:

@@ -5,6 +5,7 @@ const Register = (props) => {
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [err, setErr] = useState("");
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -14,7 +15,12 @@ const Register = (props) => {
             password,
         };
         const user = await register(newUser);
-        props.setUser(user);
+        if (user.message) {
+            setErr("A user with this username already exists.");
+        } else {
+            props.setUser(user);
+        }
+
     }
 
     return (
@@ -46,6 +52,8 @@ const Register = (props) => {
                     required
                 />
                 <button type="submit">Sign up!</button>
+                <p>{err}</p>
+
             </form>
         </section>
     );

@@ -13,7 +13,7 @@ def register():
     body = request.get_json()
     try:
         User.get(User.username == body['username'])
-        return jsonify(message='Username already taken!!')
+        return jsonify(message='Username already taken.'), 200
     except DoesNotExist:
         # hash the password
         body['password'] = generate_password_hash(body['password'])
