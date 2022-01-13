@@ -13,18 +13,20 @@ const Nav = (props) => {
 
     return (
         <div>
-        {!props.user ? 
-            <nav>
-            <Link to="/login" className="navItem">Login</Link>
-            <Link to="/register" className="navItem">Register</Link>
-            </nav> : null}
-        {(props.user !== null && props.user !== undefined) ? 
-            <nav>
-                <Link to="/new" className="navItem">Add a new Record/Pressing</Link>
-                <Link to ="/wishlist" className="navItem">Wishlist</Link> 
-                <Link to="/records" className="navItem">Records</Link>
-                <button onClick={handleClick}>Log Out</button> 
-            </nav> : null}
+            {!props.user ?
+                <nav>
+                    <Link to="/login" className="navItem">Login</Link>
+                    <Link to="/register" className="navItem">Register</Link>
+                </nav> : null}
+            {(props.user !== null && props.user !== undefined) ?
+                <nav>
+                    <Link to="/new" className="navItem">Add a new Record/Pressing</Link>
+                    <Link to="/wishlist" className="navItem">Wishlist</Link>
+                    <Link to="/records" className="navItem">Records</Link>
+                    <Link to="/listing" className="navItem">Add Listing to Marketplace</Link>
+                    <Link to="/marketplace" className="navItem">Marketplace</Link>
+                    <button onClick={handleClick}>Log Out</button>
+                </nav> : null}
         </div>
     );
 };

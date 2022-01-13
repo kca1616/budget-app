@@ -28,7 +28,7 @@ export const register = async (newUser) => {
 export const login = async (userInfo) => {
   try {
     const response = await axios.post(`${apiURL}/auth/login`, userInfo);
-    return response.data;
+    return response;
   } catch (error) {
     console.error(error.message);
   }
@@ -53,7 +53,7 @@ export const getAllRecords = async () => {
 
 export const createRecord = async (newRecord) => {
   try {
-    await axios.post(`${apiURL}/api/records/new`, newRecord);
+    return axios.post(`${apiURL}/api/records/new`, newRecord);
   } catch (error) {
     console.error(error.message);
   }
@@ -95,7 +95,24 @@ export const addFavorite = async (recordID) => {
 export const deleteFavorite = async (recordID) => {
   try {
     await axios.delete(`${apiURL}/api/records/favorites/${recordID}`);
-  } catch(error){
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+
+export const getMarketplace = async () => {
+  try {
+    const response = await axios.get(`${apiURL}/api/marketplace`);
+    return response.data;
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+
+export const addToMarketplace = async (newMarkRecord) => {
+  try {
+    await axios.post(`${apiURL}/api/marketplace/new`, newMarkRecord);
+  } catch (error) {
     console.error(error.message);
   }
 }

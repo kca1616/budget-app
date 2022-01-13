@@ -14,7 +14,9 @@ const Login = (props) => {
             password,
         };
         const user = await login(userInfo);
-        props.setUser(user);
+        props.setUser(user.data);
+        localStorage.setItem('user', user.data);
+        console.log(user.data);
         history.push('/');
     }
 
@@ -22,25 +24,25 @@ const Login = (props) => {
         <section>
             <h3>Login</h3>
             <div className="form-container">
-            <form className="login" onSubmit={handleSubmit}>
-                <label htmlFor="username">Username:</label>
-                <input
-                    id="username"
-                    type="text"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                    required
-                />
-                <label htmlFor="password">Password:</label>
-                <input
-                    id="password"
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
-                <button type="submit">Log in!</button>
-            </form>
+                <form className="login" onSubmit={handleSubmit}>
+                    <label htmlFor="username">Username:</label>
+                    <input
+                        id="username"
+                        type="text"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                        required
+                    />
+                    <label htmlFor="password">Password:</label>
+                    <input
+                        id="password"
+                        type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    />
+                    <button type="submit">Log in!</button>
+                </form>
             </div>
         </section>
     );
