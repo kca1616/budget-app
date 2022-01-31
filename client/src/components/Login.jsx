@@ -5,6 +5,7 @@ import { useHistory } from 'react-router-dom';
 const Login = (props) => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [err, setErr] = useState("");
     const history = useHistory();
 
     const handleSubmit = async (e) => {
@@ -14,10 +15,15 @@ const Login = (props) => {
             password,
         };
         const user = await login(userInfo);
-        props.setUser(user.data);
-        localStorage.setItem('user', user.data);
-        console.log(user.data);
-        history.push('/');
+        if (user.message) {
+            setErr("Username or password is incorrect.");
+        } else {
+            props.setUser(user.data);
+            localStorage.setItem('user', user.data);
+            // console.log(user.data);
+            history.push('/');
+        }
+
     }
 
     return (
@@ -42,6 +48,7 @@ const Login = (props) => {
                         required
                     />
                     <button type="submit">Log in!</button>
+                    <p>{err}</p>
                 </form>
             </div>
         </section>

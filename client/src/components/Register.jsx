@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { register } from "../services"
+import { useHistory } from 'react-router-dom';
 
 const Register = (props) => {
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [err, setErr] = useState("");
+    const history = useHistory();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -15,10 +17,12 @@ const Register = (props) => {
             password,
         };
         const user = await register(newUser);
+        console.log(user);
         if (user.message) {
             setErr("A user with this username already exists.");
         } else {
             props.setUser(user);
+            history.push('/');
         }
 
     }
