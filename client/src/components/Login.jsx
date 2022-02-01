@@ -14,7 +14,7 @@ const Login = (props) => {
             username,
             password,
         };
-        const user = await login(userInfo);
+        const user = await login(userInfo).catch((err) => err);
         if (user.message) {
             setErr("Username or password is incorrect.");
         } else {

@@ -19,7 +19,6 @@ export const defaultRoute = async () => {
 export const register = async (newUser) => {
   try {
     const response = await axios.post(`${apiURL}/auth/register`, newUser);
-    console.log(response.data);
     return response.data;
 
   } catch (error) {

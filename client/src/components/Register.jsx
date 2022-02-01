@@ -16,10 +16,11 @@ const Register = (props) => {
             email,
             password,
         };
-        const user = await register(newUser);
+        console.log(newUser);
+        const user = await register(newUser).catch((err) => err);
         console.log(user);
-        if (user.message) {
-            setErr("A user with this username already exists.");
+        if (user?.message) {
+            setErr("A user with this username or email already exists.");
         } else {
             props.setUser(user);
             history.push('/');
